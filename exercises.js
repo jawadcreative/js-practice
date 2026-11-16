@@ -44,3 +44,25 @@ function largeNumber() {
 }
 
 largeNumber()
+
+function removeDuplicates() {
+    let arr = [10, 20, 30, 10, 40, 30]
+
+    let clean = []
+
+    for (let i = 0; i < arr.length; i++) {
+        let duplicate = false
+        for (let j = 0; j < i; j++) {
+            if (arr[i] === arr[j]) {
+                duplicate = true
+            }
+        }
+        if (!duplicate) {
+            clean.push(arr[i])
+        }
+    }
+
+    console.log(clean)
+}
+
+removeDuplicates()
