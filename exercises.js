@@ -113,18 +113,30 @@
 // console.log(isPalindrome())
 
 
-function fizzBuzz() {
-    for (let i = 1; i <= 20; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("FizzBuzz");
-        } else if (i % 3 === 0) {
-            console.log("Fizz");
-        } else if (i % 5 === 0) {
-            console.log("Buzz");
-        } else {
-            console.log(i);
-        }
+// function fizzBuzz() {
+//     for (let i = 1; i <= 20; i++) {
+//         if (i % 3 === 0 && i % 5 === 0) {
+//             console.log("FizzBuzz");
+//         } else if (i % 3 === 0) {
+//             console.log("Fizz");
+//         } else if (i % 5 === 0) {
+//             console.log("Buzz");
+//         } else {
+//             console.log(i);
+//         }
+//     }
+// }
+
+// fizzBuzz();
+
+function counter() {
+    let count = 0;
+    function inner() {
+        count++
+        console.log(count)
     }
+    return inner
 }
 
-fizzBuzz();
+let count1 = counter()
+count1()
