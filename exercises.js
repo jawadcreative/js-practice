@@ -29,3 +29,18 @@ function countVowels() {
 
 }
 countVowels()
+
+function largeNumber() {
+    let arr = [-30, -40, -70, -20, -10, -90]
+    let max = arr[0]
+
+    arr.forEach(item => {
+        if (item > max) {
+            max = item
+        }
+    })
+
+    console.log(max)
+}
+
+largeNumber()
