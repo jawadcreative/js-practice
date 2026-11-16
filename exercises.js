@@ -91,3 +91,13 @@ function groupByDepartment() {
 }
 
 console.log(groupByDepartment());
+
+function capitalize() {
+    const word = "jawad ahmad";
+
+    const result = word.split(" ").map(word => word.charAt(0).toLocaleUpperCase() + word.slice(1)).join(" ")
+
+    console.log(result)
+}
+
+capitalize()
