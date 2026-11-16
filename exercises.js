@@ -66,3 +66,28 @@ function removeDuplicates() {
 }
 
 removeDuplicates()
+
+
+function groupByDepartment() {
+    const employees = [
+        { name: "Jawad", department: "Frontend" },
+        { name: "Ali", department: "Backend" },
+        { name: "Ahmed", department: "Frontend" },
+        { name: "Usman", department: "UI/UX" },
+        { name: "Hamza", department: "Backend" }
+    ];
+
+    return employees.reduce((acc, employee) => {
+        const department = employee.department;
+
+        if (!acc[department]) {
+            acc[department] = [];
+        }
+
+        acc[department].push(employee);
+
+        return acc;
+    }, {});
+}
+
+console.log(groupByDepartment());
