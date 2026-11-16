@@ -101,3 +101,13 @@ function capitalize() {
 }
 
 capitalize()
+
+function isPalindrome() {
+    const str = 'Jawad'
+
+    const reversed = str.split('').reverse().join('').toLocaleLowerCase()
+
+    return str.toLocaleLowerCase() === reversed
+}
+
+console.log(isPalindrome())
