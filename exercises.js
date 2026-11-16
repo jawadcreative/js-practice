@@ -1,133 +1,133 @@
-// function reverseString(string) {
-//     let str = string
-//     let spliString = str.split('')
-//     let reverse = ''
+function reverseString(string) {
+    let str = string
+    let spliString = str.split('')
+    let reverse = ''
 
-//     for (let i = spliString.length - 1; i >= 0; i--) {
-//         reverse += spliString[i]
-//     }
-//     console.log(reverse)
-// }
+    for (let i = spliString.length - 1; i >= 0; i--) {
+        reverse += spliString[i]
+    }
+    console.log(reverse)
+}
 
-// reverseString('Jawad Ahmad')
-
-
-// function countVowels() {
-//     const string = 'Jawad Ahmad'
-//     const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
-//     const split = string.split('')
-//     let count = 0;
-
-//     split.forEach(item => {
-//         vowels.forEach(char => {
-//             if (item === char) {
-//                 count++
-//             }
-//         })
-//     })
-//     console.log(count)
-
-// }
-// countVowels()
-
-// function largeNumber() {
-//     let arr = [-30, -40, -70, -20, -10, -90]
-//     let max = arr[0]
-
-//     arr.forEach(item => {
-//         if (item > max) {
-//             max = item
-//         }
-//     })
-
-//     console.log(max)
-// }
-
-// largeNumber()
-
-// function removeDuplicates() {
-//     let arr = [10, 20, 30, 10, 40, 30]
-
-//     let clean = []
-
-//     for (let i = 0; i < arr.length; i++) {
-//         let duplicate = false
-//         for (let j = 0; j < i; j++) {
-//             if (arr[i] === arr[j]) {
-//                 duplicate = true
-//             }
-//         }
-//         if (!duplicate) {
-//             clean.push(arr[i])
-//         }
-//     }
-
-//     console.log(clean)
-// }
-
-// removeDuplicates()
+reverseString('Jawad Ahmad')
 
 
-// function groupByDepartment() {
-//     const employees = [
-//         { name: "Jawad", department: "Frontend" },
-//         { name: "Ali", department: "Backend" },
-//         { name: "Ahmed", department: "Frontend" },
-//         { name: "Usman", department: "UI/UX" },
-//         { name: "Hamza", department: "Backend" }
-//     ];
+function countVowels() {
+    const string = 'Jawad Ahmad'
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    const split = string.split('')
+    let count = 0;
 
-//     return employees.reduce((acc, employee) => {
-//         const department = employee.department;
+    split.forEach(item => {
+        vowels.forEach(char => {
+            if (item === char) {
+                count++
+            }
+        })
+    })
+    console.log(count)
 
-//         if (!acc[department]) {
-//             acc[department] = [];
-//         }
+}
+countVowels()
 
-//         acc[department].push(employee);
+function largeNumber() {
+    let arr = [-30, -40, -70, -20, -10, -90]
+    let max = arr[0]
 
-//         return acc;
-//     }, {});
-// }
+    arr.forEach(item => {
+        if (item > max) {
+            max = item
+        }
+    })
 
-// console.log(groupByDepartment());
+    console.log(max)
+}
 
-// function capitalize() {
-//     const word = "jawad ahmad";
+largeNumber()
 
-//     const result = word.split(" ").map(word => word.charAt(0).toLocaleUpperCase() + word.slice(1)).join(" ")
+function removeDuplicates() {
+    let arr = [10, 20, 30, 10, 40, 30]
 
-//     console.log(result)
-// }
+    let clean = []
 
-// capitalize()
+    for (let i = 0; i < arr.length; i++) {
+        let duplicate = false
+        for (let j = 0; j < i; j++) {
+            if (arr[i] === arr[j]) {
+                duplicate = true
+            }
+        }
+        if (!duplicate) {
+            clean.push(arr[i])
+        }
+    }
 
-// function isPalindrome() {
-//     const str = 'Jawad'
+    console.log(clean)
+}
 
-//     const reversed = str.split('').reverse().join('').toLocaleLowerCase()
-
-//     return str.toLocaleLowerCase() === reversed
-// }
-
-// console.log(isPalindrome())
+removeDuplicates()
 
 
-// function fizzBuzz() {
-//     for (let i = 1; i <= 20; i++) {
-//         if (i % 3 === 0 && i % 5 === 0) {
-//             console.log("FizzBuzz");
-//         } else if (i % 3 === 0) {
-//             console.log("Fizz");
-//         } else if (i % 5 === 0) {
-//             console.log("Buzz");
-//         } else {
-//             console.log(i);
-//         }
-//     }
-// }
+function groupByDepartment() {
+    const employees = [
+        { name: "Jawad", department: "Frontend" },
+        { name: "Ali", department: "Backend" },
+        { name: "Ahmed", department: "Frontend" },
+        { name: "Usman", department: "UI/UX" },
+        { name: "Hamza", department: "Backend" }
+    ];
 
-// fizzBuzz();
+    return employees.reduce((acc, employee) => {
+        const department = employee.department;
+
+        if (!acc[department]) {
+            acc[department] = [];
+        }
+
+        acc[department].push(employee);
+
+        return acc;
+    }, {});
+}
+
+console.log(groupByDepartment());
+
+function capitalize() {
+    const word = "jawad ahmad";
+
+    const result = word.split(" ").map(word => word.charAt(0).toLocaleUpperCase() + word.slice(1)).join(" ")
+
+    console.log(result)
+}
+
+capitalize()
+
+function isPalindrome() {
+    const str = 'Jawad'
+
+    const reversed = str.split('').reverse().join('').toLocaleLowerCase()
+
+    return str.toLocaleLowerCase() === reversed
+}
+
+console.log(isPalindrome())
+
+
+function fizzBuzz() {
+    for (let i = 1; i <= 20; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("Fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
+
+fizzBuzz();
 
 function counter() {
     let count = 0;
@@ -140,3 +140,20 @@ function counter() {
 
 let count1 = counter()
 count1()
+
+function cartTotal() {
+    const cart = [
+        { name: 'Shoes', price: 2500, quatity: 2 },
+        { name: 'Book', price: 205, quatity: 1 },
+        { name: 'Shirts', price: 500, quatity: 1 },
+        { name: 'Watch', price: 5000, quatity: 3 }
+    ]
+
+    const total = cart.reduce((acc, item) => {
+        return acc + item.price
+    }, 0)
+
+    console.log(total)
+}
+
+cartTotal()
